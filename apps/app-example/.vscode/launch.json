@@ -2,10 +2,10 @@
   "version": "0.1.0",
   "configurations": [
     {
-      "name": "Desktop Dev",
+      "name": "App Dev",
       "type": "node-terminal",
       "request": "launch",
-      "command": "turbo dev --filter=desktop..."
+      "command": "turbo dev --filter=app..."
     }
   ]
 }
