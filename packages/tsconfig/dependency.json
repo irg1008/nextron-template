@@ -1,0 +1,9 @@
+{
+  "display": "Dependency",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "outDir": "lib",
+    "baseUrl": "src"
+  },
+  "include": ["src/**/*"]
+}

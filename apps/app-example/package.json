@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "name": "desktop",
+  "productName": "MyApp",
+  "description": "",
+  "version": "0.5.0",
+  "author": "",
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "nextron dev --port 8585 --inspect 8585",
+    "build": "nextron build",
+    "build:all": "nextron build --all",
+    "build:win32": "nextron build --win --ia32",
+    "build:win64": "nextron build --win --x64",
+    "build:mac": "nextron build --mac --x64",
+    "build:linux": "nextron build --linux",
+    "postinstall": "electron-builder install-app-deps",
+    "postbuild": "pnpm make",
+    "make": "iscc ./setup.iss"
+  },
+  "dependencies": {
+    "electron-log": "4.4.8",
+    "electron-serve": "1.1.0",
+    "electron-store": "8.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.7",
+    "@types/react": "18.0.28",
+    "electron": "24.1.2",
+    "electron-builder": "23.6.0",
+    "eslint-config-custom": "workspace:*",
+    "next": "13.2.4",
+    "nextron": "8.5.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "shared": "workspace:*",
+    "swr": "2.1.3",
+    "tailwind-config": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "5.0.2"
+  }
+}

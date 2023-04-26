@@ -1,0 +1,42 @@
+module.exports = {
+  extends: [
+    'next',
+    'turbo',
+    'eslint:recommended',
+    'plugin:prettier/recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jsx-a11y/recommended',
+  ],
+  plugins: [
+    'react',
+    'prettier',
+    'tailwindcss',
+    '@typescript-eslint',
+    'eslint-plugin-tailwindcss',
+  ],
+  rules: {
+    '@next/next/no-html-link-for-pages': 'off',
+    'react/jsx-key': 'off',
+    'jsx-quotes': 'off',
+    'prefer-const': 'error',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'error',
+    'prettier/prettier': 'error',
+    'tailwindcss/no-custom-classname': 'off',
+    'tailwindcss/classnames-order': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'jsx-a11y/no-noninteractive-tabindex': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+};

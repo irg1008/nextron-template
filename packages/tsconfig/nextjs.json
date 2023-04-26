@@ -1,0 +1,18 @@
+{
+  "display": "Next.js",
+  "extends": "./app.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "outDir": ".next",
+    "lib": ["dom", "dom.iterable", "esnext"]
+  },
+  "include": ["next-env.d.ts"],
+  "exclude": ["node_modules"]
+}

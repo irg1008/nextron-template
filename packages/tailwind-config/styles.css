@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply colored shadow based on background color using DaisyUI. */
+.btn:not(:disabled) {
+  @apply shadow-md shadow-info transition-all;
+  --shadow-opacity: 0.3;
+  --tw-shadow-color: hsl(var(--shadow-color) / var(--shadow-opacity));
+  --tw-ring-color: hsl(var(--shadow-color) / 50%);
+  &:active,
+  &.btn-outline {
+    --shadow-opacity: 0.1;
+  }
+  &.btn-ghost {
+    --shadow-opacity: 0;
+  }
+  &:not(.btn-outline):not(.btn-ghost) {
+    @apply drop-shadow-sm ring-0 ring-inset;
+  }
+}
+
+/* Disable anoying always-sticky first header column on daisyui table */
+.table th:first-child {
+  @apply !relative;
+}
+
+/* For some reason the max number of elements in for-each is 8. So we do it twice */
+@each $name, $var in (primary, secondary, accent, neutral, base-100),
+  (p, s, a, n, b1)
+{
+  .btn-$(name) {
+    --shadow-color: var(--$(var));
+  }
+}
+
+@each $name, $var in (info, success, warning, error), (in, su, wa, er) {
+  .btn-$(name) {
+    --shadow-color: var(--$(var));
+  }
+}
+
+.tooltip {
+  text-transform: unset;
+}

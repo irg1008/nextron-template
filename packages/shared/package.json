@@ -1,0 +1,28 @@
+{
+  "name": "shared",
+  "main": "lib",
+  "types": "src",
+  "type": "module",
+  "scripts": {
+    "dev": "tsup --watch --silent --onSuccess \"echo Detected changes in shared, rebuilding...\"",
+    "build": "tsup",
+    "postinstall": "pnpm build"
+  },
+  "tsup": {
+    "entry": [
+      "src/**/*.ts"
+    ],
+    "dts": true,
+    "format": [
+      "esm"
+    ],
+    "clean": true,
+    "outDir": "lib"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.7",
+    "tsconfig": "workspace:*",
+    "tsup": "6.7.0",
+    "typescript": "5.0.2"
+  }
+}

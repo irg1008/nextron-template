@@ -1,0 +1,13 @@
+{
+  "display": "App",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,10 @@
+node_modules
+*.log
+.next
+app
+!renderer/**/app
+!lib
+dist
+out
+.turbo
+.env.*
